@@ -1,0 +1,56 @@
+Outliers in machine learning refer to data points that significantly deviate from the rest of the dataset. These anomalies can arise due to various reasons such as measurement errors, data corruption, or natural variations in the data. Handling outliers is critical as they can distort the results of machine learning models, especially those sensitive to data distribution.
+
+Types of Outliers
+Global Outliers: Data points that are significantly different from the rest of the dataset.
+
+Example: A person's height being recorded as 8 feet in a dataset of average human heights.
+Contextual Outliers: Data points that are anomalous in a specific context.
+
+Example: 30°C might be normal in summer but an outlier in winter.
+Collective Outliers: A group of data points that deviate together.
+
+Example: A sudden spike in network traffic might indicate a potential attack.
+
+
+Causes of Outliers
+Human Errors: Data entry mistakes, measurement errors, or incorrect labels.
+Instrument Errors: Faulty sensors or equipment producing incorrect readings.
+Natural Variation: Genuine but rare occurrences in the data.
+Data Processing Issues: Incorrect handling during data cleaning or transformation.
+Impact of Outliers
+Skewed Statistics: Mean, variance, and other statistical measures can be distorted.
+Model Performance: Models like linear regression, k-means clustering, and PCA are sensitive to outliers.
+Misleading Insights: Outliers can lead to incorrect conclusions and decisions.
+Detecting Outliers
+
+
+Visualization Techniques:
+
+Boxplots
+Scatterplots
+Histograms
+Statistical Methods:
+
+Z-score: Identifies points with a high standard deviation from the mean.
+Interquartile Range (IQR): Points beyond 
+𝑄1 - 1.5*IQR or 𝑄3 + 1.5*IQR
+
+
+
+Machine Learning Techniques:
+
+Isolation Forest
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+One-Class SVM
+Handling Outliers
+
+
+Remove Outliers: If they are due to errors and not relevant to the analysis.
+Transform Data: Apply techniques like log transformation to reduce the impact of outliers.
+
+Cap or Impute Values: Replace outliers with a threshold value or the median/mean.
+Use Robust Models: Algorithms like Random Forest or Gradient Boosting are less sensitive to outliers.
+
+
+When to Keep Outliers?
+Outliers should not always be removed. If they represent valid and critical phenomena, such as fraud detection or rare diseases, they should be preserved for analysis.
